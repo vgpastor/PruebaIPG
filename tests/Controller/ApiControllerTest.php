@@ -13,12 +13,7 @@ class ApiControllerTest extends WebTestCase
         $client = static::createClient();
         $client->request('GET', '/api/post');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $response = '{
-    "userId": 1,
-    "id": 1,
-    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
-  }';
+        $response = '{"id":1,"title":"Post #0","body":"This is my 0 blog post!","author":{';
         if (false !== $client->getResponse()->getContent()) {
             $this->assertStringContainsString($response, $client->getResponse()->getContent());
         }
