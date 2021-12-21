@@ -4,3 +4,5 @@ parameters:
         - src
         - tests
     checkGenericClassInNonGenericObjectType: false
+    checkMissingIterableValueType: false
+
