@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+{% block body %}
+    <h1>List of posts</h1>
+    <section>
+        {% for post in posts %}
+            <article>
+                <h2><a href="{{ path('web_get_detail',{'id':post.id}) }}"> {{ post.title }}</a></h2>
+                <p>{{ post.body|slice(0,50) }}</p>
+                <p>{{ post.author.name }}</p>
+            </article>
+        {% endfor %} %}
+    </section>
+{% endblock %}

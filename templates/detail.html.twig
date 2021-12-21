@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+{% block body %}
+    <article id="post">
+        <h1>{{ post.title }}</h1>
+        <div>
+        {% autoescape false %}{{ post.body }}{% endautoescape %}
+        </div>
+
+        <div id="author">
+            <h2>{{ post.author.name }}</h2>
+            {% autoescape false %}
+            {{ post.author.abstract }}
+            {% endautoescape %}
+            <div class="other">
+                <h3>Other posts of the author</h3>
+                {% for rPost in post.author.posts %}
+                    <a href="{{ path('web_get_detail', {'id': rPost.id}) }}">{{ rPost.title }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </article>
+{% endblock %}

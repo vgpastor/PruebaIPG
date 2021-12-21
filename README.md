@@ -18,6 +18,8 @@ Se trata de crear una API REST y frontal web con las siguientes especificaciones
 - Create DB, migration and fixtures
 - Remove Fake response and update with db response
 - Improve logic to create a post
+- Agrado Twig y Encore
+- Creado el controlador para los requerimientos y los test asociados.
 
 
 ## Todo
@@ -25,3 +27,17 @@ Se trata de crear una API REST y frontal web con las siguientes especificaciones
 - Validar el body del post al crear con una api antiplagio
 - Validar el body no contenga tags html prohibidas (Scripts, iframes, etc) Ahora solo valida los script
 - Validar el body no contenga palabras mal sonantes.
+- Limpiar el encore con las cosas no necesarias.
+- Limpiar algunos complementos que se podrían eliminar para aumentar rendimiento en el symfon.
+- Limpiar y optimizar los ficheros de comentarios insípidos.
+
+
+## Instalación
+- `composer install`
+- Copy `.env` to `.env.local` and update the values.
+- `symfony console doctrine:database:create`
+- `symfony console doctrine:migrations:migrate`
+- `symfony console doctrine:fixtures:load`
+- `npm install`
+- `npm run build` o `npm run watch`
+- `symfony server`

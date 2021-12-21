@@ -26,6 +26,11 @@ class PostRepository extends ServiceEntityRepository implements PostRepositoryIn
         return parent::findAll();
     }
 
+    final public function findId(int $id): Post
+    {
+        return parent::find($id);
+    }
+
     /**
      * @throws OptimisticLockException
      * @throws ORMException

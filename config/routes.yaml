@@ -7,3 +7,13 @@ api_post:
     path: /api/post
     controller: App\Controller\ApiController::create
     methods: put
+
+web_get:
+    path: /
+    controller: App\Controller\WebController::getAll
+    methods: get
+
+web_get_detail:
+    path: /post/{id}
+    controller: App\Controller\WebController::getDetail
+    methods: get
