@@ -14,3 +14,5 @@ Se trata de crear una API REST y frontal web con las siguientes especificaciones
 ## Pasos seguidos
 
 - Creación del entorno general, basado en symfony 5.4 y doctrine 2.10 sobre PHP 8.0 con PHPStan, PHP-CS-Fixer y PHPUnit
+- Creación de los test de la API REST y hacerlos funcionar
+- 

@@ -1,3 +1,9 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+api_get:
+    path: /api/post
+    controller: App\Controller\ApiController::getAll
+    methods: get
+
+api_post:
+    path: /api/post
+    controller: App\Controller\ApiController::create
+    methods: put
